@@ -1,0 +1,38 @@
+<div style="text-align:left">
+  
+   <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          USER LIST
+        </a>
+      </div>
+    </div>
+  </nav>
+     
+<div class="col-md-6 col-md-offset-3">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Phone</th>
+    </tr>
+    <tr *ngFor="let u of data.UserList">
+      <td> {{ u.name }} </td>
+      <td> {{ u.email }} </td>
+      <td> {{ u.address }} </td>
+      <td> {{ u.phone }} </td>
+
+      <td>
+          <button type="button" class="btn btn-danger" (click)= "deleting(u.id)" >
+            <span class="glyphicon glyphicon-trash"></span> Delete
+          </button>
+      </td>
+
+    </tr>
+  </table>
+</div>
+
+
+</div>
